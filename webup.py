@@ -8,7 +8,7 @@ TelegramApi = 'https://api.telegram.org/bot'
 TelegramBotToken = os.environ.get("TELEGRAM_API_TOKEN")
 
 my_dict = {
-    "https://www.mident.cz": "/kontakttest",
+    "https://www.mident.cz": "/kontakt",
     "https://www.mident.ro": "/contact",
     "https://www.midentcare.hu": "/contact",
     "https://www.mident-de.de": "https://www.mident-de.de/kontakt/",
