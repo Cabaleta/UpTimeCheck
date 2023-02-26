@@ -39,15 +39,22 @@ def check_website(url, link):
 
     proxy = random.choice(proxies)
 
-    r = requests.get(url, headers=headers, proxies=proxy)
-    if r.status_code == 200:
-        soup = BeautifulSoup(r.text, 'html.parser')
-        if soup.find('a', href=link):
-            return True
+    for i in range(5):
+        proxy = random.choice(proxies)
+        r = requests.get(url, headers=headers, proxies=proxy)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, 'html.parser')
+            if soup.find('a', href=link):
+                return True
+            else:
+                return False
         else:
-            return False
-    else:
-        return False
+            time_taken = r.elapsed.total_seconds()
+            if time_taken > 25:
+               # If the time taken is more than 25 seconds, repeat the check
+               continue
+
+    return False
 
 def send_message(chat_id, message):
     
