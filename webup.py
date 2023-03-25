@@ -11,7 +11,7 @@ my_dict = {
     "https://www.mident.cz": "/kontakt",
     "https://www.mident.ro": "/contact",
     "https://www.midentcare.hu": "/contact",
-    "https://www.mident-de.de": "https://www.mident-de.de/kontakt/",
+    "https://www.mident-de.de": "https://www.mident-de.de/kontakt",
     "https://www.jansel.cz": "/kontakt",
     "https://www.nakupino.cz": "/kontakt",
     "https://www.purplpink.cz": "https://purplpink.cz/kontakt/"
